@@ -1,0 +1,12 @@
+Part I:
+
+1. Removes files from working directory that have not been staged or committed
+2. "-f" forces the clean command and "-d" includes directories
+3. git checkout -b [BRANCH NAME]
+4. Use FF merge when the working branch is behind the incoming merging branch.  Recursive when the working branch has elements that are more up to date and vice-versa.
+5. git checkout [BRANCH NAME]
+6. git checkout [FILE NAME]
+7. git branch -D [BRANCH NAME]
+8. Lets you see the difference between commits separated by "==========" and ">>>>>>>>>>"
+9. git reset HEAD [FILE NAME]
+10. When merging branches that contain the same file with different content, Git cannot determine which file to put on the merged branch.

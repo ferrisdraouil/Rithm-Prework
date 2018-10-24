@@ -1,0 +1,29 @@
+Part I:
+
+1. export FIRST_NAME=FERRIS
+2. echo $FIRST_NAME
+3. echo $PATH
+4. $PATH is a reference to the PATH environment	variable, which when called, will display the current folder/file path the system is on.
+5. As a quick reference to a specific location that can be called from anywhere within the terminal environment
+6. Open the shell configuration	file from ~ (find shell config file using ls -a if you can't remember the name) and enter "export [VAR NAME]=/[FILE PATH] on its own new line
+7. A program on the computer that is currently being run
+8. ps aux
+9. The unique ID number for each individual process
+10. kill || kill -9 [PID#]
+11. Sometimes kill won't work because the process is unresponsive and cannot take the command.  In this case, use kill -9 to force the kill command.
+12. -i
+13. -B
+14. -C
+15. -A
+16. -w
+17. -n
+
+Part II:
+
+1. find ~/Desktop -name "learn"
+2. find ~/Desktop -name "P*"
+3. find ~/Desktop -name "*.txt"
+4. find ~/Desktop/views -name "*data*"
+5. grep -c "Elie" instructors.txt
+6. grep -w "P.*" instructors.txt
+7. grep -in "z.*" instructors.txt

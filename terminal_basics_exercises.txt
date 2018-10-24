@@ -1,0 +1,28 @@
+Part I:
+
+1. mkdir first
+2. cd first
+3. touch person.txt
+4. mv person.txt another.txt
+5. cp another.txt copy.txt
+6. rm copy.txt
+7. cd ..
+   cp -r first second
+8. rm -rf second
+
+Part II:
+
+1. "man" gives a listing and explanation of the flags for a particular command, such as rm, or cp.   You scroll using the arrow keys and quit by pressing 'q'.
+2. The '-l' flag for ls displays the long format for each file, which includes a wealth of data about each file. Additional flags can be added to sort the display by parameter, for example, ls -lrS lists files sorted by increasing size.  The '-a' flag includes hidden entries whose names begin with a dot (.).
+3. curl https://www.google.com > google.html
+4. less google.html
+5. less -p hplogo google.html
+6. option left/option right
+7. ctrl e
+8. ctrl a
+9. option + delete
+10. Terminal runs a shell program.  As shell processes commands from the user and returns the outputs.
+11. An absolute path starts from the root directory and, in sequence, tells the shell exactly which folders/files to proceed to, creating an exact path from root (/) to end.
+12. Relative path is the path relative to the present working directory.  Its written as cd (input).  cd .. moves one directory up and cd (file or folder in current directory) moves a level lower to the specified location.
+13. Flags are supplemental commands that accompany principal commands.  'rm -rf' commands the shell to remove an entire directory including its file holdings.  'cp -r' commands the shell to copy a directory including its file holdings.  'ls -l' displays long format data about each file in a directory.
+14. '-f' will force removal. '-r' will delete empty folders on its own and when paired with '-f' will delete populated ones as well. 

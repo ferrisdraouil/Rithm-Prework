@@ -1,0 +1,14 @@
+.jumbotron {
+  background: rgba(255, 255, 250, 0.7);
+  font-family: 'Krub', sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  background-image: url(https://i.imgur.com/nbtlerW.jpg);
+}
+
+.navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

@@ -60,23 +60,23 @@ function addCardListeners() {
 
 let timer = document.getElementById('timer');
 
-function runTimer() {
-  let seconds = 0;
-  let minutes = 0;
-  let hours = 0;
-  setInterval(function() {
-    seconds++;
-    if (seconds === 60) {
-      seconds = 0;
-      minutes++;
-    }
-    if (minutes === 60) {
-      minutes = 0;
-      hours++;
-    }
-    timer.innerHTML = hours + ' hrs ' + minutes + ' mins ' + seconds + ' secs';
-  }, 1000);
-}
+// function runTimer() {
+//   let seconds = 0;
+//   let minutes = 0;
+//   let hours = 0;
+//   setInterval(function() {
+//     seconds++;
+//     if (seconds === 60) {
+//       seconds = 0;
+//       minutes++;
+//     }
+//     if (minutes === 60) {
+//       minutes = 0;
+//       hours++;
+//     }
+//     timer.innerHTML = hours + ' hrs ' + minutes + ' mins ' + seconds + ' secs';
+//   }, 1000);
+// }
 
 // function sleep(milliseconds) {
 //   let start = new Date().getTime();
@@ -92,13 +92,14 @@ function testMatch() {
     tempVal = this.innerHTML;
     this.classList.add('disabled');
   } else if (this.innerHTML !== tempVal) {
-    //sleep(2000);
     document.querySelectorAll('.disabled').forEach(element => {
       element.classList.remove('disabled');
     });
-    document.querySelectorAll('.flip').forEach(element => {
-      element.classList.remove('flip');
-    });
+    setTimeout(function() {
+      document.querySelectorAll('.flip').forEach(element => {
+        element.classList.remove('flip');
+      });
+    }, 2000);
     tempVal = '';
     totalMoves++;
   } else {
@@ -110,9 +111,10 @@ function testMatch() {
     totalMatched += 2;
     totalMoves++;
   }
-  if (totalMoves === 1) {
-    runTimer();
-  }
+  document.getElementById('moves').innerHTML = totalMoves;
+  // if (totalMoves === 1) {
+  //   runTimer();
+  // }
   if (totalMatched === 16) {
     //end game
   }

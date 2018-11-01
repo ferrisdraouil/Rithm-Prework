@@ -32,6 +32,7 @@ function createMeme() {
   let topText = document.getElementById('meme-header').value;
   let bottomText = document.getElementById('meme-footer').value;
   let memeImage = new Image();
+
   memeImage.src = document.getElementById('meme-picture').value;
   newCanvas.width = memeImage.width;
   newCanvas.height = memeImage.height;
@@ -41,7 +42,7 @@ function createMeme() {
   ctx.font = '20px Arial';
   ctx.fillText(topText, newCanvas.width / 2, newCanvas.height / 5);
   ctx.fillText(bottomText, newCanvas.width / 2, newCanvas.height * (4 / 5));
-
+  console.log(memeImage.height);
   document.getElementById('created-memes-' + clicks).appendChild(newCanvas);
 }
 

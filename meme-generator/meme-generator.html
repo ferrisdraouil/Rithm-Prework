@@ -8,24 +8,27 @@
   <link rel="stylesheet" href="meme-generator.css">
 </head>
 <body>
-  <p class='input-field'>
-    Top text:
-    <input type="text" id="meme-header">
-  </p>
-  <p class='input-field'>
-    Bottom text:
-    <input type="text" id="meme-footer">
-  </p>
-  <p class='input-field'>
-    Image URL:
-    <input type="url" id="meme-picture">
-  </p>
-  <p class='input-field'>
-    <button id="create-meme">Make your meme!</button>
-  </p>
-  <p>
-    <div id="image-area"></div>
-  </p>
-  <script src="meme-generator.js"></script>
+  <form id='input-form'>
+    <p class='input-field'>
+      Top text:
+      <input type="text" id="meme-header">
+    </p>
+    <p class='input-field'>
+      Bottom text:
+      <input type="text" id="meme-footer">
+    </p>
+    <p class='input-field'>
+      Image URL:
+      <input type="url" id="meme-picture">
+    </p>
+    <p class='input-field'>
+      <button id="create-meme">Make your meme!</button>
+    </p>
+  </form>
+    <p>
+      <div id="image-area"></div>
+    </p>
+  
+    <script src="meme-generator.js"></script>
 </body>
 </html>

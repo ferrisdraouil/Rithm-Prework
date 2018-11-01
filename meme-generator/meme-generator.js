@@ -1,5 +1,6 @@
 let clicks = 0;
-document.getElementById('create-meme').addEventListener('click', function() {
+document.getElementById('input-form').addEventListener('submit', function(e) {
+  e.preventDefault();
   clicks++;
   appendNewDiv();
   createMeme();
@@ -34,16 +35,23 @@ function createMeme() {
   let memeImage = new Image();
 
   memeImage.src = document.getElementById('meme-picture').value;
-  newCanvas.width = memeImage.width;
-  newCanvas.height = memeImage.height;
-  ctx.clearRect(0, 0, newCanvas.width, newCanvas.height);
-  ctx.drawImage(memeImage, 0, 0, newCanvas.width, newCanvas.height);
-  ctx.textAlign = 'center';
-  ctx.font = '20px Arial';
-  ctx.fillText(topText, newCanvas.width / 2, newCanvas.height / 5);
-  ctx.fillText(bottomText, newCanvas.width / 2, newCanvas.height * (4 / 5));
-  console.log(memeImage.height);
-  document.getElementById('created-memes-' + clicks).appendChild(newCanvas);
+
+  memeImage.addEventListener('load', function() {
+    newCanvas.width = memeImage.width;
+    newCanvas.height = memeImage.height;
+    ctx.clearRect(0, 0, newCanvas.width, newCanvas.height);
+    ctx.drawImage(memeImage, 0, 0, newCanvas.width, newCanvas.height);
+    ctx.textAlign = 'center';
+    ctx.font = '20px Arial';
+    ctx.fillText(topText, newCanvas.width / 2, newCanvas.height / 5);
+    ctx.fillText(bottomText, newCanvas.width / 2, newCanvas.height * (4 / 5));
+    console.log(
+      memeImage.height,
+      document.getElementById('meme-picture').value
+    );
+    document.getElementById('created-memes-' + clicks).appendChild(newCanvas);
+    document.getElementById('input-form').reset();
+  });
 }
 
 //5. Append button on image that removes image

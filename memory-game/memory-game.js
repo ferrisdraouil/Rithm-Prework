@@ -111,7 +111,7 @@ function testMatch() {
     totalMatched += 2;
     totalMoves++;
   }
-  document.getElementById('moves').innerHTML = totalMoves;
+  document.getElementById('moves').innerHTML = 'Total Moves: ' + totalMoves;
   // if (totalMoves === 1) {
   //   runTimer();
   // }
